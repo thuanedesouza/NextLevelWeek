@@ -1,0 +1,195 @@
+/* Arquivo organizado na ordem que as coisas aparecem na html*/
+:root{ /*referencia a raiz do html, podemos colocar propriedades que sãoreplicadas 
+    como variáveis
+*/
+--title-color: #322153;
+--primary-color: #34cb79;
+}
+
+*{/*referencia basicamente todos os seletores*/
+    margin:0;
+    padding:0;
+}
+
+html{
+   
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: #f0f0f5;
+    -webkit-font-smoothing: atialiased;
+}
+/*BOX MODEL
+modelo de caixa, toda caixa tem bordas, tamanho, organização e 
+maneira que é vista pelo html, o display
+caixas também podem ter alinhamentos*/
+
+/*../ -> buscar na pagina acima*/
+
+a{
+    text-decoration: none;/*para tirar o sublinhado dos links*/
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--text-color);    
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#page-home {
+    height: 100vh;/* viewport height, 1 vh é relativo a 1% da viewport assim permite a imagem
+    ocupar mais espaço que os elementos */
+    background: url('../assets/home-background.svg') no-repeat;/* bg tende a se repetir*/
+    background-position: 35vw bottom;/* viewport width*/
+}
+
+
+#page-home .content{
+    /*fixo ou adaptável ao tamanho da tela ? */
+    /*fixo:
+       width: 900px; 
+    */
+    /* adaptavel: */
+    width: 90%; 
+    color: var(--title-color);
+    max-width: 1100px; /*largura maxima*/
+    /* duas maneiras de definir margem:
+    maneira 1) valores predefinidos
+    margin-left: auto;
+    margin-right: auto;
+    maneira 2) valores personalizados 
+    margin: 50px auto  20px 15px*/
+    margin: 0 auto;
+    /*tornando esse conteúdo mais dinamico: */
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    }
+    
+
+
+#page-home header{
+    margin-top: 48px;
+    display: flex;/*posicionamento*/
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#page-home header a{
+    display: flex;
+    color: var(--title-color);
+    font-weight: 700;
+
+}
+
+#page-home header a span{/* a imagem precisa de largura, altura e alinhamento para aparece */
+    display: flex;
+    margin-right: 16px;
+    background-image: url('../assets/log-in.svg');
+    width: 20px;
+    height: 20px;
+
+}
+
+#page-home main{
+    max-width: 560px;
+    /*dinamizando */
+    flex: 1;/*possível porque trabalhamos o flex no home content */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#page-home main h1{
+    font-size: 54px; /*mesma cor do a, mas pra nao ficar reescrevendo isso colocamos um root nessa sheet*/
+
+    
+}
+
+#page-home main p {
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 24px;
+}
+
+#page-home main a{
+    width: 100%;
+    max-width: 360px;
+    height: 72px;
+   
+    /*arredondamento de bordas */
+    border-radius: 8px;
+    
+    display: flex;
+    align-items:center;
+
+    margin-top: 40px;
+
+    background: var(--primary-color);
+
+    transition: 400ms;/* isso atrasa o hover e fica mais elegante*/
+    /*font-weight: bold; não necessário porque usamos <strong> no html*/ 
+ 
+}
+
+#page-home main a:hover {
+/* quando a tiver com a funcionalidade hover ele consegue aplicar
+estilização especial */
+background-color: #2fb86e;
+}
+
+#page-home main a span{
+    width: 72px;
+    height: 72px;
+    /*rgb no formato numérico e com alpha que é a transparência */
+    background-color: rgba(0, 0, 0, 0.08);
+    /* pra nao ficar sobrando o quadrado fora da borda do botão*/
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    display: flex;/* assim podemos ver a imagem que vem do pseudo elemento after abaixo */
+    align-items: center;
+    justify-content: center;
+}
+/*criar um pseudo elemento no span chamado after pra colocar uma 
+bg image no css e nao no html :D*/
+#page-home main a span::after{
+    content: "";
+    background-image: url(../assets/search.svg);
+    width: 20px;
+    height: 20px;
+}
+#page-home main a strong {
+    flex: 1;
+    color: white;
+    text-align: center;
+}
+
+/*conjunto de regras para algumas configurações*/
+@media(max-width: 900px) {
+    /*definindo como as coisas vão funcionar antes de 900 px de tela */
+    #page-home{
+        background-position-x:70vw;/* some a imagem para o conteúdo não ficar se sobrepondo*/
+    }
+    #page-home .content {
+        align-items: center;
+        text-align: center;
+        
+    }
+    #page-home header a {
+        position: absolute;
+        bottom: 48px;
+
+        left:50%;
+        /*achar sempre o meio */
+        transform: translateX(-50%);
+        
+    }
+    #page-home main{
+        align-items: center;
+    }
+
+}
