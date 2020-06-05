@@ -19,8 +19,27 @@
         transform: translateX(-50%);
         
     }
+
     #page-home main{
         align-items: center;
     }
 
+}
+
+@media(max-width: 490px) {
+    /*definindo como as coisas vão funcionar antes de 900 px de tela */
+    #page-home{
+        background-position-x:70vw;/* some a imagem para o conteúdo não ficar se sobrepondo*/
+    }
+
+    #page-home header a {
+        position: absolute;
+        bottom: 10px;
+
+        left:50%;
+        /*achar sempre o meio */
+        transform: translateX(-50%);
+        
+    }
+    
 }
