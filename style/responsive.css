@@ -1,0 +1,26 @@
+
+/*conjunto de regras para algumas configurações*/
+@media(max-width: 900px) {
+    /*definindo como as coisas vão funcionar antes de 900 px de tela */
+    #page-home{
+        background-position-x:70vw;/* some a imagem para o conteúdo não ficar se sobrepondo*/
+    }
+    #page-home .content {
+        align-items: center;
+        text-align: center;
+        
+    }
+    #page-home header a {
+        position: absolute;
+        bottom: 48px;
+
+        left:50%;
+        /*achar sempre o meio */
+        transform: translateX(-50%);
+        
+    }
+    #page-home main{
+        align-items: center;
+    }
+
+}
