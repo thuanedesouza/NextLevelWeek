@@ -26,6 +26,18 @@
 
 }
 
+@media(min-width: 1700px){/* aplicado do min pra cima*/
+    #page-home{
+        background-position-x: 40vw;
+     }
+}
+
+@media(max-height: 760px){/* aplicaddo maximo pra baixo*/
+    #page-home{
+        background-position-y: 200px;
+     }
+}
+
 @media(max-width: 490px) {
     /*definindo como as coisas vão funcionar antes de 900 px de tela */
     #page-home{
@@ -43,3 +55,4 @@
     }
     
 }
+
