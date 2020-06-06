@@ -40,11 +40,16 @@ function getCities(event) {
     //Para que ele pegue a cidade dinâmicamente ${ufValue} onde ficava o valor da uf
     const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios`
 
+    //iniciar com o conteúdo "Selecione a Cidade" sempre para que ele nao concatene com o resultado de uma busca anterior
+    citySelect.innerHTML = "<option value> Selecione a Cidade </option>"
+    citySelect.disabled = true //assim ele bloqueia e volta
+
     fetch(url)
     .then( res => res.json() )
     .then( cities => {
+       
         for( const city of cities){
-            citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>`
+            citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
         }
         //quando é escolhida o estado e encontrada as cidades habilitamos as opções de cidade
         citySelect.disabled = false
