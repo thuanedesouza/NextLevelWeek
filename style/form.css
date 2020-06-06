@@ -1,0 +1,87 @@
+form h1 {
+    font-size: 36px;
+}
+
+form fieldset {
+    margin-top: 64px;
+
+    border: 0;
+}
+
+form legend {
+    margin-bottom: 40px;
+
+}
+
+form legend h2{
+    font-size: 24px;
+}
+
+form .field{
+    flex: 1; /* ele se estica em todo espaço que tiver disponível*/
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+form .field-group{
+    display: flex;
+}
+
+form input, 
+form select{
+    background-color: #f0f0f5;
+
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+
+    border-radius: 8px;
+    /*outline: none; opcional mas se for tirar 
+    é bom ter algo pra pessoa saber em qua campo está*/
+}
+
+form select{ /*previnir mudanças indesejadas no chrome*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* margem entre endereço e numero, apenas um elemento da pagina 
+acontece depois de .field-group .field  que é o .field onde 
+quero colocar a margem*/
+form .field-group .field + .field{
+    margin-left: 24px;
+
+}
+
+form button{
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+
+    border-radius: 8px;
+    margin-top: 40px;
+    
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    border:0;
+
+    margin-top: 40px;
+    /*especificando sobre o que estou aplicando transição
+    senão ele aplica sobre tudo, nesse caso, apenas sobre a cor*/
+    transition: background-color 400ms;
+}
+
+
+form button:hover{
+
+    background-color: #2fb86e;
+}

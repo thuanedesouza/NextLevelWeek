@@ -9,6 +9,8 @@
 *{/*referencia basicamente todos os seletores*/
     margin:0;
     padding:0;
+    box-sizing: border-box;
+    color: var(--title-color);
 }
 
 html{

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:wght@700&&display=swap" rel="stylesheet">
+    <!-- chamando arquivo css-->
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/create-point.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+    <link rel="stylesheet" href="../style/form.css">
+
+    <title>Criar Um Ponto de Coleta</title> <!-- titulo da pagina-->
+</head>
+<body>
+    <div id = "page-create-point">
+
+            <header>
+                <img src = "../assets/logo.svg" alt = "Logomarca"> 
+                
+                
+                
+                <a href =""> <span></span>
+                    Voltar para home
+                </a>
+                
+            </header>
+
+            <form action="">
+
+                <h1>Cadastro do Ponto de Coleta</h1>
+                
+                <fieldset> <!-- vai agrupar as duas partes de dados--> 
+                    <legend>
+                       <h2>Dados da Entidade</h2> 
+                    </legend>
+                    <div class="field">
+                        <label for = "" >Nome da Entidade</label>
+                        <input type = "text" name = "name">
+                </fieldset>
+                
+                <div class="field-group">
+                    <div class="field">
+                        <label for = "address"> Endereço </label>
+                        <input type = "text" name = "address">
+
+                    </div>
+                    <div class="field">
+                        <label for = "address2"> Número/Complemento </label>
+                        <input type = "text" name = "address2">
+
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <div class="field">
+                        <label for = "state"> Estado </label>
+                        <select name = "uf">
+                            <option value="">Selecione o Estado</option>
+                        </select>
+
+                    </div>
+                    
+                    <div class="field">
+                        <label for = "city"> Cidade </label>
+                        <select name = "city" disabled>
+                            <option value="">Selecione a Cidade</option>
+                        </select>
+
+                    </div>
+                    
+                </div>
+
+
+               
+                <button type="submit">Cadastrar Ponto de Coleta</button>
+
+            </form>
+    </div>
+
+</body>
+</html>
