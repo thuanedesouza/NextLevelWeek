@@ -61,3 +61,60 @@ function getCities(event) {
 document
     .querySelector("select[name = uf]")
     .addEventListener("change", getCities) 
+
+//Itens de Coleta
+
+// pegar todos os li's
+
+const itemsToColect = document.querySelectorAll(".items-grid li")
+//".items-grid li" acaba pegando tudo dentro do li, podemos evitar isso com o css
+    for (const item of itemsToColect){
+    
+    item.addEventListener("click", handleSelectedItem)
+}
+//variavel para tratar seleções
+const collectedItems = document.querySelector("input[name=items]")
+let selectedItems = []
+
+
+function handleSelectedItem(event){
+
+    const itemLi = event.target
+    // adicionar e remover uma classe com js
+    // toggle adiciona ou remove, em classList tem adicionar e remover tbm
+    itemLi.classList.toggle("selected")
+
+    const itemId = event.target.dataset.id
+    
+    //tratando seleção
+    //verificar se tem itens selecionados e pegá-los
+
+    const alreadySelected = selectedItems.findIndex( (item)=>{
+        //mesmo sendo arrow function e podendo ser menor assim fica mais descritivo
+        const itemFound = item == itemId
+        return itemFound
+    } ) 
+
+    //se já tiver selecionado, tirar seleção
+    if ( alreadySelected >= 0 ){/* está no array de selecionados? */
+        //tirar da seleção
+        const filteredItems = selectedItems.filter( item => {
+            const itemIsDifferent = item != itemId //sendo diferente pode add, senao pode retirar
+            return itemIsDifferent;// 
+        })
+
+        selectedItems = filteredItems
+
+        selectedItems = filteredItems
+    } 
+    //se não estiver selecionado adicionar à seleção
+    selectedItems.push(itemId)
+
+    //atualizar o campo escondido com os itens selecionados
+    
+    /* passamos pra cima pq toda vez vai ser buscado isso aqui quando
+     chamar a funçãodocument.querySelector("input[name=items]")*/
+
+     collectedItems.value = selectedItems
+}
+
