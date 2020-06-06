@@ -9,3 +9,7 @@ Todo o desenvolvimento foi feito seguindo um protótipo do Figma.
 # Arquivos
 
 Foi utilizada a extensão do Visual Studio, Live Server. Com essa extensão conseguimos ter a página da aplicação atualizada a cada segundo no navegador. Basta clicar no arquivo com o botão direito e escolher a opção **Open With Live Server**.
+
+# API utilizada
+
+API de localização do IBGE
