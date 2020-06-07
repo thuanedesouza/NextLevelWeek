@@ -1,11 +1,19 @@
 //arquivo a ser executado pelo node, criação do servidor
 
-    const express = require ("express")
+    const express = require ("express")//puxando do node mudules pra ca
     const server = express() /* Objeto de servidor usado para ligar o servidor */
 
     //configurar pasta publica
     server.use(express.static("public"))
 
+
+    //utilizando template engine
+
+    const nunjucks = require("nunjucks")
+    nunjucks.configure("src/views", {
+        express: server,
+        noCache: true
+    })
 
     //configurar caminhos da minha aplicação
     //pagina inicial
