@@ -86,7 +86,7 @@ main .cards h1 {
 main .cards h3{
     margin: 24px 0;
 
-    font-family: Roboto;
+    font-family: Roboto,sans-serif;
     font-weight: bold;
     
     font-size: 24px;
