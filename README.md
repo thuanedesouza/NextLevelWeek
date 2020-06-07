@@ -12,7 +12,7 @@ Foi utilizada a extensão do Visual Studio, Live Server. Com essa extensão é c
 
 *(aqui foi em uma porta 5500, o número que aparece após os ":" no link que é gerado http://127.0.0.1:5500/index.html)*
 
-*Com isso as paginas criadas são configuradas para abrir com servidor não é possível vizualizar toda beleza tratada no css apenas abrindo a html no navegador*
+*Com isso as paginas criadas são configuradas para abrir com servidor não é possível visualizar toda beleza tratada no css apenas abrindo a html no navegador*
 
 
 # API utilizada
