@@ -29,3 +29,6 @@ nodemon
 # Template Engine
 
 nunjucks
+
+# Extensões VSCode 
+Nunjucks Template

@@ -1,130 +1,151 @@
-<!DOCTYPE html>
-<html lang="pt_br">
-<head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:wght@700&&display=swap" rel="stylesheet">
-    <!-- chamando arquivo css-->
-    <link rel="stylesheet" href="../style/main.css">
+{% extends "partials/layout.html" %}
+
+{% set pageId = "page-create-point" %}
+{% block title %}
+    <title>Criar Um Ponto de Coleta</title>
+    <!-- titulo da pagina-->
+{% endblock title %}
+
+{% block styles %}
     <link rel="stylesheet" href="../style/create-point.css">
-    <link rel="stylesheet" href="../style/responsive.css">
     <link rel="stylesheet" href="../style/form.css">
+{% endblock styles %}
 
-    <title>Criar Um Ponto de Coleta</title> <!-- titulo da pagina-->
-</head>
-<body>
-    <div id = "page-create-point">
+{% block content %}
 
-            <header>
-                <img src = "../assets/logo.svg" alt = "Logomarca"> 
-                   
+    {% include "partials/page-header.html" %}
+
+    <form action="">
+        <fieldset>
+            <legend>
+                <h1>Cadastro do Ponto de Coleta</h1>
+            </legend>
+
+            <fieldset>
+                <!-- vai agrupar as duas partes de dados-->
+                <legend>
+                    <h2>Dados da Entidade</h2>
+                </legend>
+
+            <div class="field-group">
+                <div class="field">
+                        <label for="">Nome da Entidade</label>
+                        <input type="text" name="name" required="required">
+                    
+                </div> 
+                <div class="field">
+                        <label for="">Imagem da Entidade</label>
+                        <input 
+                        type="url" 
+                        name="image" 
+                        placeholder = "http://"
+                        required="required">
+                </div>
+            </div>
+            </fieldset>
                 
-                <a href ="/"> <span></span>
-                    Voltar para home
-                </a>
-                
-            </header>
 
-            <form action="">
-                <fieldset>
-                    <legend>
-                        <h1>Cadastro do Ponto de Coleta</h1>
-                    </legend>
-                    
-                    
-                    <fieldset> <!-- vai agrupar as duas partes de dados--> 
-                        <legend>
-                        <h2>Dados da Entidade</h2> 
-                        </legend>
-                        <div class="field">
-                            <label for = "" >Nome da Entidade</label>
-                            <input type = "text" name = "name" required>
-                    </fieldset>
-                    
-                    <div class="field-group">
-                        <div class="field">
-                            <label for = "address"> Endereço </label>
-                            <input type = "text" name = "address" required>
+                <div class="field-group">
+                    <div class="field">
+                        <label for="address">
+                            Endereço
+                        </label>
+                        <input type="text" name="address" required="required">
 
-                        </div>
-                        <div class="field">
-                            <label for = "address2"> Número/Complemento </label>
-                            <input type = "text" name = "address2" required>
+                    </div>
+                    <div class="field">
+                        <label for="address2">
+                            Número/Complemento
+                        </label>
+                        <input type="text" name="address2" required="required">
 
-                        </div>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <div class="field">
+                        <label for="state">
+                            Estado
+                        </label>
+                        <select name="uf" required="required">
+                            <option value="">Selecione o Estado</option>
+                            <option value="1">Opções</option>
+                        </select>
+                        <!--Tratando o link que é gerado quando evaimso um formulario-->
+                        <input type="hidden" name="state">
                     </div>
 
-                    <div class="field-group">
-                        <div class="field">
-                            <label for = "state"> Estado </label>
-                            <select name = "uf" required>
-                                <option value="">Selecione o Estado</option>
-                                <option value="1">Opções</option>
-                            </select>
-                            <!--Tratando o link que é gerado quando evaimso um formulario-->
-                            <input type = "hidden" name = "state">
-                        </div>
-                        
-                        <div class="field">
-                            <label for = "city"> Cidade </label>
-                            <select name = "city" disabl required>
-                                <option value="">Selecione a Cidade</option>
-                            </select>
+                    <div class="field">
+                        <label for="city">
+                            Cidade
+                        </label>
+                        <select name="city" disabl="disabl" required="required">
+                            <option value="">Selecione a Cidade</option>
+                        </select>
 
-                        </div>
-                        
                     </div>
-                </fieldset>
 
-                <fieldset>
-                    <legend>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>
                     <h2>Itens de Coleta</h2>
-                    </legend>
+                    <span>Selecione um ou mais itens abaixo</span>
+                </legend>
 
-                    <div class = "items-grid">
-                        <li data-id ="item-1"> <!--lista com dataset-->
-                            <img src = "assets/lampadas.svg" alt = "Lâmpadas">
-                            <span>Lâmpadas</span>
+                <div class="items-grid">
+                    <li data-id="item-1">
+                        <!--lista com dataset-->
+                        <img src="assets/lampadas.svg" alt="Lâmpadas">
+                        <span>Lâmpadas</span>
 
-                        </li>
-                        <li data-id ="item-2"> <!--lista com dataset-->
-                            <img src = "assets/baterias.svg" alt = "Pilhas e Baterias">
-                            <span>Pilhas e Baterias</span>
+                    </li>
+                    <li data-id="item-2">
+                        <!--lista com dataset-->
+                        <img src="assets/baterias.svg" alt="Pilhas e Baterias">
+                        <span>Pilhas e Baterias</span>
 
-                        </li>
-                        <li data-id ="item-3"> <!--lista com dataset-->
-                            <img src = "assets/papeis-papelao.svg" alt = "Papéis e papelão">
-                            <span>Papéis e papelão</span>
+                    </li>
+                    <li data-id="item-3">
+                        <!--lista com dataset-->
+                        <img src="assets/papeis-papelao.svg" alt="Papéis e papelão">
+                        <span>Papéis e papelão</span>
 
-                        </li>
-                        <li data-id ="item-4"> <!--lista com dataset-->
-                            <img src = "assets/eletronicos.svg" alt = "Resíduos Eletrônicos">
-                            <span>Resíduos Eletrônicos</span>
+                    </li>
+                    <li data-id="item-4">
+                        <!--lista com dataset-->
+                        <img src="assets/eletronicos.svg" alt="Resíduos Eletrônicos">
+                        <span>Resíduos Eletrônicos</span>
 
-                        </li>
-                        <li data-id ="item-5"> <!--lista com dataset-->
-                            <img src = "assets/organicos.svg" alt = "Residuos Orgânicos">
-                            <span>Residuos Orgânicos</span>
+                    </li>
+                    <li data-id="item-5">
+                        <!--lista com dataset-->
+                        <img src="assets/organicos.svg" alt="Residuos Orgânicos">
+                        <span>Residuos Orgânicos</span>
 
-                        </li>
-                        <li data-id ="item-6"> <!--lista com dataset-->
-                            <img src = "assets/oleo.svg" alt = "Óleo de Cozinha">
-                            <span>Óleo de Cozinha</span>
+                    </li>
+                    <li data-id="item-6">
+                        <!--lista com dataset-->
+                        <img src="assets/oleo.svg" alt="Óleo de Cozinha">
+                        <span>Óleo de Cozinha</span>
 
-                        </li>
-                    </div>
-                    <!--Ajustando o envio dos dados selecionados-->
-                    <input type="hidden" name="items">
+                    </li>
+                </div>
+                <!--Ajustando o envio dos dados selecionados-->
+                <input type="hidden" name="items">
 
-                </fieldset>
+            </fieldset>
 
-               
-                <button type="submit">Cadastrar Ponto de Coleta</button>
+            <button type="submit">Cadastrar Ponto de Coleta</button>
 
-            </form>
-    </div>
+        </form>
+    {% endblock content %}
 
-    <script src ="/scripts/create-point.js"></script>
+    {% block scripts %}
+        <script src="/scripts/create-point.js"></script>
+
+    {% endblock scripts %}
 
 </body>
 </html>

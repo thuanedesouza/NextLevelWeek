@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8"> <!-- aceita caracteres especiais-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- faz a pagina caber em tudo varios tamanhos de tela-->
+
+
+{% block name %}
+    <title>Ecoleta</title> <!-- Se não achar titulo nas páginas usa esse -->
+{% endblock name %}    
+ 
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:wght@700&&display=swap" rel="stylesheet">
+    <!-- chamando arquivo css-->
+    <link rel="stylesheet" href="../style/main.css">
+
+{% block styles %}
+{% endblock styles %}
+
+    <link rel="stylesheet" href="../style/responsive.css">
+
+    
+</head>
+<body>
+    <div id = "{{ pageId }}">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    {% block modal %} 
+    {% endblock modal %}
+
+    {% block scripts %}
+    {% endblock scripts %}
+</body>
+</html>

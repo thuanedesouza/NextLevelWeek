@@ -33,6 +33,23 @@
         
     }
 
+    #page-create-point .field-group{
+        flex-direction: column;
+    }
+
+    #page-create-point .field-group .field + .field{
+        margin-left: 0;
+    }
+
+    #page-create-point form {
+        padding: 20px;
+    }
+    #page-create-point form fieldset .items-grid{
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+
+    }
+
 }
 
 @media(min-width: 1700px){/* aplicado do min pra cima*/
