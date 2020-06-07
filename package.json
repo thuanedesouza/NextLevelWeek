@@ -1,0 +1,23 @@
+{
+  "name": "nextlevelweek",
+  "version": "1.0.0",
+  "description": "Esse repositório contém  o projeto da maratona da Rocketseat 01/06/2020 à 07/06/2020.",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thuanedesouza/NextLevelWeek.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thuanedesouza/NextLevelWeek/issues"
+  },
+  "homepage": "https://github.com/thuanedesouza/NextLevelWeek#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

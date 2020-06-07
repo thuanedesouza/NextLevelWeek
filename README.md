@@ -18,3 +18,8 @@ Foi utilizada a extensão do Visual Studio, Live Server. Com essa extensão é c
 # API utilizada
 
 API de localização do IBGE
+
+# Pacote Utilizado
+
+NPM
+Express
