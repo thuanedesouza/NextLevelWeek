@@ -15,6 +15,7 @@ Foi utilizada a extensão do Visual Studio, Live Server. Com essa extensão é c
 *Com isso as paginas criadas são configuradas para abrir com servidor não é possível visualizar toda beleza tratada no css apenas abrindo a html no navegador*
 
 
+
 # API utilizada
 
 API de localização do IBGE
@@ -23,3 +24,4 @@ API de localização do IBGE
 
 NPM
 Express
+Nodemon 
