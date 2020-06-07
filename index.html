@@ -1,0 +1,73 @@
+<!--Index final-->
+
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8"> <!-- aceita caracteres especiais-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- faz a pagina caber em tudo varios tamanhos de tela-->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:wght@700&&display=swap" rel="stylesheet">
+    <!-- chamando arquivo css-->
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/home.css">
+    <link rel="stylesheet" href="../style/modal.css">
+
+
+    <link rel="stylesheet" href="../style/responsive.css">
+
+    <title>Ecoleta</title> <!-- titulo da pagina-->
+</head>
+<body>
+    <div id = "page-home">
+        <div class = "content">
+            <header>
+                <img src = "../assets/logo.svg" alt = "Logomarca"> 
+                <!-- alt serve pro caso de nao carregar a imagem e para acessibilidade, é isso que o leitor de tela vai ler-->
+                
+                
+                <a href ="http://google.com.br"> <span></span>
+                    Cadastre um ponto de coleta
+                </a>
+                
+            </header>
+            <main><!-- main no html: parte principal do documento, informações principais-->
+                <h1 >Seu marketplace de coleta de residuos </h1>
+            
+                <p>Ajudamos pessoas a encontrarem pontos de coletas de forma eficiente.</p>
+                <a href="#">
+                    <!--Strong já vem por padrão com bold na fonte-->
+                    <span></span><strong>Pesquisar seus pontos de coleta</strong>
+                </a>
+                
+
+            </main>
+           
+                
+            </div>
+    </div>
+
+    <div id = "modal" class="hide"> <!-- esconder o modal a classe hide no css-->
+        <div class = "content">
+            <div class = "header">
+                <h1>Pontos de Partida</h1>
+                <a href="#">Fechar</a>
+            </div>
+            <form action="">
+                <label for = "search">Cidade</label>
+                <div class="search field">
+                    <input type = "text" 
+                    name = "search"
+                    placeholder="Pesquise por cidade"> <!--O que fica no campo enquanto não recebe valor-->
+                    
+                    <button>
+                        <img src = "/assets/search.svg" alt = "Buscar">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src = "/scripts/index.js"></script>
+
+</body>
+</html>

@@ -30,7 +30,7 @@ form .field-group{
 
 form input, 
 form select{
-    background-color: #f0f0f5;
+    background-color: var(--white-ish-color);
 
     border: 0;
     padding: 16px 24px;

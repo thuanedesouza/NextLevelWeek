@@ -4,6 +4,7 @@
 */
 --title-color: #322153;
 --primary-color: #34cb79;
+--white-ish-color: #f0f0f5;
 }
 
 *{/*referencia basicamente todos os seletores*/
@@ -19,7 +20,7 @@ html{
 }
 
 body{
-    background: #f0f0f5;
+    background: var(--white-ish-color);
       -webkit-font-smoothing: atialiased;
 }
 /*BOX MODEL

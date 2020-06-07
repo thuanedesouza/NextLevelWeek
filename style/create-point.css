@@ -99,4 +99,5 @@ do li na hora que selecionarmos uma opção*/
 .items-grid li img,
 .items-grid li span{
     pointer-events: none;
+    /*agora o target foi corrigido */
 }
