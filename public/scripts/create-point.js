@@ -67,6 +67,9 @@ document
 // pegar todos os li's
 
 const itemsToColect = document.querySelectorAll(".items-grid li")
+//teste
+//console.log('ITEM ID', itemId)
+
 //".items-grid li" acaba pegando tudo dentro do li, podemos evitar isso com o css
     for (const item of itemsToColect){
     
@@ -114,6 +117,10 @@ function handleSelectedItem(event){
     
     /* passamos pra cima pq toda vez vai ser buscado isso aqui quando
      chamar a funçãodocument.querySelector("input[name=items]")*/
+
+    //teste
+    //console.log('Selected Items:', selectedItems)
+
 
      collectedItems.value = selectedItems
 }

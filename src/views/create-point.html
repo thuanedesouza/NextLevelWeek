@@ -8,6 +8,7 @@
 
 {% block styles %}
     <link rel="stylesheet" href="../style/create-point.css">
+    <link rel="stylesheet" href="../style/modal.css">
     <link rel="stylesheet" href="../style/form.css">
 {% endblock styles %}
 
@@ -15,7 +16,7 @@
 
     {% include "partials/page-header.html" %}
 
-    <form action="">
+    <form action="/savepoint" method = "POST">
         <fieldset>
             <legend>
                 <h1>Cadastro do Ponto de Coleta</h1>
@@ -79,7 +80,7 @@
                         <label for="city">
                             Cidade
                         </label>
-                        <select name="city" disabl="disabl" required="required">
+                        <select name="city" disable="disable" required="required">
                             <option value="">Selecione a Cidade</option>
                         </select>
 
@@ -95,37 +96,37 @@
                 </legend>
 
                 <div class="items-grid">
-                    <li data-id="item-1">
+                    <li data-id="Lâmpadas">
                         <!--lista com dataset-->
                         <img src="assets/lampadas.svg" alt="Lâmpadas">
                         <span>Lâmpadas</span>
 
                     </li>
-                    <li data-id="item-2">
+                    <li data-id="Pilhas e Baterias">
                         <!--lista com dataset-->
                         <img src="assets/baterias.svg" alt="Pilhas e Baterias">
                         <span>Pilhas e Baterias</span>
 
                     </li>
-                    <li data-id="item-3">
+                    <li data-id="Papéis e Papelão">
                         <!--lista com dataset-->
                         <img src="assets/papeis-papelao.svg" alt="Papéis e papelão">
                         <span>Papéis e papelão</span>
 
                     </li>
-                    <li data-id="item-4">
+                    <li data-id="Resíduos Eletronicos">
                         <!--lista com dataset-->
                         <img src="assets/eletronicos.svg" alt="Resíduos Eletrônicos">
                         <span>Resíduos Eletrônicos</span>
 
                     </li>
-                    <li data-id="item-5">
+                    <li data-id="Residuos Orgânicos">
                         <!--lista com dataset-->
                         <img src="assets/organicos.svg" alt="Residuos Orgânicos">
                         <span>Residuos Orgânicos</span>
 
                     </li>
-                    <li data-id="item-6">
+                    <li data-id="Óleo   ">
                         <!--lista com dataset-->
                         <img src="assets/oleo.svg" alt="Óleo de Cozinha">
                         <span>Óleo de Cozinha</span>
@@ -141,6 +142,16 @@
 
         </form>
     {% endblock content %}
+
+   
+{% block modal %}
+    {% if saved %}
+    {% include "partials/point-created.html"%}
+  <!--  {% else%}
+    {% include "partials/point-not-created.html" %}
+    -->{% endif %}
+       
+{% endblock modal %}
 
     {% block scripts %}
         <script src="/scripts/create-point.js"></script>
