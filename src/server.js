@@ -3,6 +3,9 @@
     const express = require ("express")//puxando do node mudules pra ca
     const server = express() /* Objeto de servidor usado para ligar o servidor */
 
+    //pegar o banco de dados
+    const db = require ("./database/db.js")
+
     //configurar pasta publica
     server.use(express.static("public"))
 

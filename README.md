@@ -25,6 +25,7 @@ API de localização do IBGE
 npm
 express
 nodemon 
+sqlite3
 
 # Template Engine
 
