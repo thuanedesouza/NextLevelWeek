@@ -33,8 +33,23 @@
     })
     
     server.get("/search", (req, res) => {
-        //Trocando agora q temos nunjucks    res.sendFile(__dirname + "/views/create-point.html")
-        return res.render("search-results.html")
+
+        //pegar os dados do banco de dados, copiando o metodo consulta do bd
+
+        db.all(`SELECT * FROM places`, function (err, rows) {
+            if(err){
+                return console.log(err)
+            }
+                    //teste:
+                    //console.log("Aqui estão seus registros")
+                    //console.log(rows)
+               
+                const total = rows.length
+                    //mostrar a página html com os dados do banco de dados 
+                    return res.render("search-results.html", {places: rows, total})
+        })
+
+        
     })
         
     //ligar servidor
