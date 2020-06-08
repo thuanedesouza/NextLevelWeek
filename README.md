@@ -20,12 +20,9 @@ Foi utilizada a extensão do Visual Studio, Live Server. Com essa extensão é c
 
 API de localização do IBGE
 
-# Pacote Utilizado
+# Pacotes Utilizados
 
-npm
-express
-nodemon 
-sqlite3
+npm, express, nodemon, sqlite3
 
 # Template Engine
 
