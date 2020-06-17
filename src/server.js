@@ -77,7 +77,7 @@
             }
             console.log("Cadastrado com Sucesso !")
             console.log(this)
-            return res.render("create-point.html", { saved: true})
+            return res.render("create-point.html", {saved: true})
         }
         db.run(query, values, afterInsertData)
         

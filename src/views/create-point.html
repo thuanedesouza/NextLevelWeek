@@ -147,12 +147,12 @@
 {% block modal %}
     {% if saved %}
     {% include "partials/point-created.html"%}
-  <!--  {% else%}
-    {% include "partials/point-not-created.html" %}
-    -->{% endif %}
-       
+    {% elif saved === false %}
+    {%include "partials/point-not-created.html" %}
+    {% endif %}
+    
 {% endblock modal %}
-
+ 
     {% block scripts %}
         <script src="/scripts/create-point.js"></script>
 
