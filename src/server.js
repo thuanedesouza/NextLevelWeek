@@ -2,7 +2,8 @@
 
     const express = require ("express")//puxando do node mudules pra ca
     const server = express() /* Objeto de servidor usado para ligar o servidor */
-
+    //ligar servidor
+    server.listen(3000)
     //pegar o banco de dados
     const db = require ("./database/db.js")
 
@@ -109,7 +110,6 @@
         
     })
         
-    //ligar servidor
-    server.listen(3000)
+
 
      
